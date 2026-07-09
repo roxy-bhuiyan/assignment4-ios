@@ -5,6 +5,8 @@ import { gearService } from "./gear.service";
 
 import { listGearSchema } from "./gear.validation";
 
+
+//
 class GearController {
   getAll = catchAsync(async (req: Request, res: Response) => {
     const { query } = listGearSchema.parse({ query: req.query });
