@@ -10,8 +10,6 @@ const router = Router();
 
 router.get("/", categoryController.getAll);
 
-
-// Admin routes
 router.post(
   "/",
   authenticate,
@@ -20,7 +18,6 @@ router.post(
   categoryController.create,
 );
 
-// Admin routes patch
 router.patch(
   "/:id",
   authenticate,

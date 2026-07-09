@@ -11,8 +11,6 @@ router.post(
   authController.register,
 );
 
-
-//-------
 router.post("/login", validateRequest(loginSchema), authController.login);
 
 router.get("/me", authenticate, authController.me);
