@@ -4,6 +4,8 @@ import { sendResponse } from "../../utils/send-response";
 import { UnauthorizedError } from "../../errors";
 import { userService } from "./user.service";
 
+
+//
 class UserController {
   updateProfile = catchAsync(async (req: Request, res: Response) => {
     const userId = req.user?.userId;
