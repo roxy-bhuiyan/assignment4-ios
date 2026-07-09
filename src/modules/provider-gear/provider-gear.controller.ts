@@ -4,8 +4,6 @@ import { sendResponse } from "../../utils/send-response";
 import { UnauthorizedError } from "../../errors";
 import { providerGearService } from "./provider-gear.service";
 
-
-
 class ProviderGearController {
   create = catchAsync(async (req: Request, res: Response) => {
     const providerId = req.user?.userId;
