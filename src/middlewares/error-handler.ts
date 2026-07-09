@@ -44,6 +44,8 @@ export const errorHandler = (
     message = err.message;
   }
 
+
+// Send the error response
   res.status(statusCode).json({
     success: false,
     message,
