@@ -22,6 +22,8 @@ const providers = [
   },
 ];
 
+
+//
 type SampleGear = {
   providerIndex: number;
   category: string;
