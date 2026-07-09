@@ -4,6 +4,8 @@ import { sendResponse } from "../../utils/send-response";
 import { UnauthorizedError } from "../../errors";
 import { authService } from "./auth.service";
 
+
+// -----------------
 class AuthController {
   register = catchAsync(async (req: Request, res: Response) => {
     const result = await authService.register(req.body);
@@ -14,6 +16,8 @@ class AuthController {
     });
   });
 
+
+  // ----------
   login = catchAsync(async (req: Request, res: Response) => {
     const result = await authService.login(req.body);
     sendResponse(res, {
