@@ -1,22 +1,22 @@
--- CreateEnum
+-- CreateEnum ---
 CREATE TYPE "Role" AS ENUM ('CUSTOMER', 'PROVIDER', 'ADMIN');
 
--- CreateEnum
+-- CreateEnum ---
 CREATE TYPE "UserStatus" AS ENUM ('ACTIVE', 'SUSPENDED');
 
--- CreateEnum
+-- CreateEnum ---
 CREATE TYPE "Condition" AS ENUM ('NEW', 'GOOD', 'FAIR');
 
--- CreateEnum
+-- CreateEnum ---
 CREATE TYPE "RentalStatus" AS ENUM ('PLACED', 'CONFIRMED', 'CANCELLED', 'PAID', 'PICKED_UP', 'RETURNED');
-
--- CreateEnum
+ 
+-- CreateEnum ---
 CREATE TYPE "PaymentProvider" AS ENUM ('STRIPE', 'SSLCOMMERZ');
 
--- CreateEnum
+-- CreateEnum ---
 CREATE TYPE "PaymentStatus" AS ENUM ('PENDING', 'COMPLETED', 'FAILED');
 
--- CreateTable
+-- CreateTable ---
 CREATE TABLE "users" (
     "id" TEXT NOT NULL,
     "email" TEXT NOT NULL,
@@ -33,7 +33,7 @@ CREATE TABLE "users" (
     CONSTRAINT "users_pkey" PRIMARY KEY ("id")
 );
 
--- CreateTable
+-- CreateTable ---
 CREATE TABLE "categories" (
     "id" TEXT NOT NULL,
     "name" TEXT NOT NULL,
@@ -44,7 +44,7 @@ CREATE TABLE "categories" (
     CONSTRAINT "categories_pkey" PRIMARY KEY ("id")
 );
 
--- CreateTable
+-- CreateTable ---
 CREATE TABLE "gear_items" (
     "id" TEXT NOT NULL,
     "providerId" TEXT NOT NULL,
@@ -64,7 +64,7 @@ CREATE TABLE "gear_items" (
     CONSTRAINT "gear_items_pkey" PRIMARY KEY ("id")
 );
 
--- CreateTable
+-- CreateTable ---
 CREATE TABLE "rental_orders" (
     "id" TEXT NOT NULL,
     "customerId" TEXT NOT NULL,
@@ -81,7 +81,7 @@ CREATE TABLE "rental_orders" (
     CONSTRAINT "rental_orders_pkey" PRIMARY KEY ("id")
 );
 
--- CreateTable
+-- CreateTable ---
 CREATE TABLE "payments" (
     "id" TEXT NOT NULL,
     "rentalOrderId" TEXT NOT NULL,
