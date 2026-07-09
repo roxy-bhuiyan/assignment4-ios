@@ -11,7 +11,7 @@ class GearController {
     const { query } = listGearSchema.parse({ query: req.query });
     const { items, meta } = await gearService.getAll(query);
     sendResponse(res, {
-      message: "Gears retriev successfuly",
+      message: "Gears retrieved successfully",
       meta,
       data: items,
     });
