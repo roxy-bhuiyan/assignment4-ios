@@ -5,4 +5,3 @@ export class BadRequestError extends AppError {
     super(400, message, errorDetails);
   }
 }
-
